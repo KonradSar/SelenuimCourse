@@ -13,7 +13,7 @@ public class GoogleSearchTest extends Base {
     @Test
     public void searchRandomString() {
         openPage("https://google.pl");
-        googleSearchPage.closeCookiesPopup();
+        closeCookiesBtn(googleSearchPage.closeCookiesBtn);
         googleSearchPage.enterValueToSearchInput(generateRandomString(5));
         googleSearchPage.clickEnterInSearchInput();
     }

@@ -19,10 +19,6 @@ public class BingResultsPage extends PageObjects {
     private final By nextPageArrow = By.cssSelector(".sb_pagF .sb_pagN");
     private final By closeCookiesBtn = By.cssSelector(".bnp_action_container .bnp_btn_accept");
 
-    //Method which closes cookies popup below
-    public void closeCookiesPopup() {
-        waitForElement(closeCookiesBtn).click();
-    }
 
     //Main methods for testing bing results below
     public void clickOnImagesLinkText() {

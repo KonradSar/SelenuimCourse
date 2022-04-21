@@ -16,7 +16,7 @@ public class GoogleSearchPage extends PageObjects {
 
     //Web elements available on google main page below
     private final By searchInput = By.cssSelector(".gLFyf.gsfi");
-    private final By closeCookiesBtn = By.cssSelector("#L2AGLb .QS5gu.sy4vM");
+    public final By closeCookiesBtn = By.cssSelector("#L2AGLb .QS5gu.sy4vM");
     private final By luckyBtn = By.cssSelector(".FPdoLc .RNmpXc");
     private final By graphicsLinkText = By.cssSelector(".gb_e:nth-child(2)");
     private final By gmailLinkText = By.cssSelector(".gb_e:nth-child(1)");
@@ -29,11 +29,6 @@ public class GoogleSearchPage extends PageObjects {
     private final By settingsLinkText = By.cssSelector("#Mses6b");
     private final By COneutrality2007adLinkText = By.cssSelector(".ssOUyb a:nth-child(1)");
 
-
-    //Method which closes cookies popup below
-    public void closeCookiesPopup() {
-        waitForElement(closeCookiesBtn).click();
-    }
 
     //Main methods for entering and searching any content in google below
     public void enterValueToSearchInput(String text) {

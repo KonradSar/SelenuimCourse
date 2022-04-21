@@ -13,7 +13,7 @@ public class BingSearchPage extends PageObjects {
     }
 
     //Web elements available on bing main page below
-    private final By closeCookiesBtn = By.cssSelector("#closeCookiesBtn");
+    public final By closeCookiesBtn = By.cssSelector("#bnp_btn_accept");
     private final By searchInput = By.cssSelector(".sbox #sb_form_q");
     private final By graphicsLinkText = By.cssSelector("#images a");
     private final By englishVerLinkText = By.cssSelector(".sw_mktsw a");
@@ -23,10 +23,6 @@ public class BingSearchPage extends PageObjects {
     private final By changeBackgroundArrowLeft = By.cssSelector(".nav #leftNav");
     private final By moreInfoAboutBackgroundImage = By.cssSelector(".icon_text");
 
-    //Method which closes cookies popup below
-    public void closeCookiesPopup() {
-        waitForElement(closeCookiesBtn).click();
-    }
 
     //Main methods for entering and searching any content in bing below
     public void enterValueToSearchInput(String text) {

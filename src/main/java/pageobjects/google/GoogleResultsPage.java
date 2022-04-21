@@ -11,7 +11,7 @@ public class GoogleResultsPage extends PageObjects {
     }
 
     //Web elements available on google results page below
-    private final By closeCookiesBtn = By.cssSelector(".VDity button:nth-child(2)");
+    public final By closeCookiesBtn = By.cssSelector(".VDity button:nth-child(2)");
     private final By graphicsLinkText = By.cssSelector(".MUFPAc div:nth-child(2) a");
     private final By messagesLinkText = By.cssSelector(".MUFPAc div:nth-child(3) a");
     private final By shoppingsLinkText = By.cssSelector(".MUFPAc div:nth-child(4) a");
@@ -20,10 +20,6 @@ public class GoogleResultsPage extends PageObjects {
     private final By nextPageLinkText = By.cssSelector(".BBwThe a span:nth-child(2)");
 
 
-    //Method which closes cookies popup below
-    public void closeCookiesPopup() {
-        waitForElement(closeCookiesBtn).click();
-    }
 
     //Additional methods for the whole page elements below
     public void clickOnGraphicsLinkText() {
