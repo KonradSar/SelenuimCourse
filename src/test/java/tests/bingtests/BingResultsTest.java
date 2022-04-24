@@ -1,41 +1,50 @@
 package tests.bingtests;
 
 import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
 import pageobjects.bing.BingResultsPage;
 import tests.Base;
+import utils.variables.GlobalVariables;
 
-public class BingResultsTest  extends Base {
+public class BingResultsTest extends Base {
     private final BingResultsPage bingResultsPage = new BingResultsPage(driver);
 
     @Test
     public void clickOnGraphicsLinkText() {
-        openPage("https://www.bing.com/search?q=bmw&form=QBLH&sp=-1&pq=bmw&sc=8-3&qs=n&sk=&cvid=DD26A9D928E3455D92D62E5C73437271");
-        bingResultsPage.closeCookiesPopup();
+        openPage(GlobalVariables.bmwBingResultsWebPage);
+        closeCookiesBtn(bingResultsPage.closeCookiesBtn);
         bingResultsPage.clickOnImagesLinkText();
+        Assertions.assertEquals("bmw - Bing images", driver.getTitle(), "Kliknięcie na wyniki wyszukiwania w formie grafiki nie działają");
     }
 
     @Test
-    public void clickOnVideosLinkText(){
-        openPage("https://www.bing.com/search?q=bmw&form=QBLH&sp=-1&pq=bmw&sc=8-3&qs=n&sk=&cvid=DD26A9D928E3455D92D62E5C73437271");
-        bingResultsPage.closeCookiesPopup();
+    public void clickOnVideosLinkText() {
+        openPage(GlobalVariables.bmwBingResultsWebPage);
+        closeCookiesBtn(bingResultsPage.closeCookiesBtn);
         bingResultsPage.clickOnVideoLinkText();
+        Assertions.assertEquals("bmw - Bing video", driver.getTitle(), "Kliknięcie na wyniki wyszukiwania w formie video nie działają");
     }
+
     @Test
-    public void clickOnMapsLinkText(){
-        openPage("https://www.bing.com/search?q=bmw&form=QBLH&sp=-1&pq=bmw&sc=8-3&qs=n&sk=&cvid=DD26A9D928E3455D92D62E5C73437271");
-        bingResultsPage.closeCookiesPopup();
+    public void clickOnMapsLinkText() {
+        openPage(GlobalVariables.bmwBingResultsWebPage);
+        closeCookiesBtn(bingResultsPage.closeCookiesBtn);
         bingResultsPage.clickOnMapsLinkText();
+        Assertions.assertEquals("bmw - Bing Mapy", driver.getTitle(), "Kliknięcie na wyniki wyszukiwania w formie Mapy nie działają");
     }
+
     @Test
-    public void clickOnMessagesLinkText(){
-        openPage("https://www.bing.com/search?q=bmw&form=QBLH&sp=-1&pq=bmw&sc=8-3&qs=n&sk=&cvid=DD26A9D928E3455D92D62E5C73437271");
-        bingResultsPage.closeCookiesPopup();
+    public void clickOnMessagesLinkText() {
+        openPage(GlobalVariables.bmwBingResultsWebPage);
+        closeCookiesBtn(bingResultsPage.closeCookiesBtn);
         bingResultsPage.clickOnMessagesLinkText();
+        Assertions.assertEquals("bmw - Bing News", driver.getTitle(), "Kliknięcie na wyniki wyszukiwania w formie wiadomości nie działają");
     }
+
     @Test
-    public void clickOnNextPageArrow(){
-        openPage("https://www.bing.com/search?q=bmw&form=QBLH&sp=-1&pq=bmw&sc=8-3&qs=n&sk=&cvid=DD26A9D928E3455D92D62E5C73437271");
-        bingResultsPage.closeCookiesPopup();
+    public void clickOnNextPageArrow() {
+        openPage(GlobalVariables.bmwBingResultsWebPage);
+        closeCookiesBtn(bingResultsPage.closeCookiesBtn);
         bingResultsPage.clickOnNextPageArrow();
     }
 }

@@ -1,9 +1,7 @@
 package pageobjects.bing;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.By;
 import pageobjects.PageObjects;
 
 public class BingResultsPage extends PageObjects {
@@ -17,7 +15,7 @@ public class BingResultsPage extends PageObjects {
     private final By mapsLinkText = By.cssSelector("#b-scopeListItem-local a");
     private final By messagesLinkText = By.cssSelector("#b-scopeListItem-news a");
     private final By nextPageArrow = By.cssSelector(".sb_pagF .sb_pagN");
-    private final By closeCookiesBtn = By.cssSelector(".bnp_action_container .bnp_btn_accept");
+    public final By closeCookiesBtn = By.cssSelector(".bnp_action_container .bnp_btn_accept");
 
 
     //Main methods for testing bing results below
@@ -29,10 +27,16 @@ public class BingResultsPage extends PageObjects {
         waitForElement(videoLinkText).click();
     }
 
-    public void clickOnMapsLinkText() {waitForElement(mapsLinkText).click();}
+    public void clickOnMapsLinkText() {
+        waitForElement(mapsLinkText).click();
+    }
 
-    public void clickOnMessagesLinkText() {waitForElement(messagesLinkText).click();}
+    public void clickOnMessagesLinkText() {
+        waitForElement(messagesLinkText).click();
+    }
 
-    public void clickOnNextPageArrow() {waitForElement(nextPageArrow).click();}
+    public void clickOnNextPageArrow() {
+        waitForElement(nextPageArrow).click();
+    }
 
 }

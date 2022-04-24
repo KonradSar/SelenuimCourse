@@ -1,6 +1,7 @@
 package tests.bingtests;
 
 import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
 import pageobjects.bing.BingSearchPage;
 import tests.Base;
 
@@ -8,11 +9,12 @@ public class BingSearchTest extends Base {
     private final BingSearchPage bingSearchPage = new BingSearchPage(driver);
 
     @Test
-    public void searchRandomString() {
+    public void searchBMWString() {
         openPage("https://www.bing.com/?cc=pl");
         closeCookiesBtn(bingSearchPage.closeCookiesBtn);
         bingSearchPage.enterValueToSearchInput("BMW");
         bingSearchPage.clickEnterInSearchInput();
+        Assertions.assertEquals("BMW - Wyszukaj", driver.getTitle(), "Wyszukiwana fraza nie została poprawnie wyszukana w przegladarce bing.com");
     }
 
     @Test

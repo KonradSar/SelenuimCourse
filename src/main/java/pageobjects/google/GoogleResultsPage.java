@@ -20,7 +20,6 @@ public class GoogleResultsPage extends PageObjects {
     private final By nextPageLinkText = By.cssSelector(".BBwThe a span:nth-child(2)");
 
 
-
     //Additional methods for the whole page elements below
     public void clickOnGraphicsLinkText() {
         waitForElement(graphicsLinkText).click();

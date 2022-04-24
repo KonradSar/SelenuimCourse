@@ -1,4 +1,6 @@
-package utils;
+package utils.methods;
+
+import utils.variables.GlobalVariables;
 
 import java.util.Random;
 
@@ -13,6 +15,7 @@ public class StringGenerator {
             stringBuilder.append(phraseForGoogleSearcher);
 
         }
+        GlobalVariables.stringValue = stringBuilder.toString() + " - Szukaj w Google";
         return stringBuilder.toString();
 
     }

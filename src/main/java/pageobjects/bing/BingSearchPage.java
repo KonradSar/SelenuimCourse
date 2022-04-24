@@ -3,7 +3,6 @@ package pageobjects.bing;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.By;
 import pageobjects.PageObjects;
 
 public class BingSearchPage extends PageObjects {
@@ -33,22 +32,32 @@ public class BingSearchPage extends PageObjects {
         waitForElement(searchInput).sendKeys(Keys.ENTER);
     }
 
-    public void changeBackgroundWall(){
+    public void changeBackgroundWall() {
         waitForElement(changeBackgroundArrowLeft).click();
     }
 
-    public void findOutMoreInfoAboutBackgroundImage(){
+    public void findOutMoreInfoAboutBackgroundImage() {
         waitForElement(moreInfoAboutBackgroundImage).click();
     }
 
     //Additional methods for the whole page elements below
-    public void clickOnGraphicsLinkText() {waitForElement(graphicsLinkText).click();}
+    public void clickOnGraphicsLinkText() {
+        waitForElement(graphicsLinkText).click();
+    }
 
-    public void clickOnEnglishVersionLinkText() {waitForElement(englishVerLinkText).click();}
+    public void clickOnEnglishVersionLinkText() {
+        waitForElement(englishVerLinkText).click();
+    }
 
-    public void clickOnLogInLinkText() {waitForElement(logInLinkText).click();}
+    public void clickOnLogInLinkText() {
+        waitForElement(logInLinkText).click();
+    }
 
-    public void clickOnVideoLinkText() {waitForElement(videoLinkText).click();}
+    public void clickOnVideoLinkText() {
+        waitForElement(videoLinkText).click();
+    }
 
-    public void clickOnTranslateLinkText() {waitForElement(translateLinkText).click();}
+    public void clickOnTranslateLinkText() {
+        waitForElement(translateLinkText).click();
+    }
 }
